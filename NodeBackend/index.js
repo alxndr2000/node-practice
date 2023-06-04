@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = 3069;
-const programmingLanguagesRouter = require("./routes/programmingLanguages");
+const displayDBRouter = require("./routes/displayDB");
 app.use(express.json());
 app.use(
   express.urlencoded({
@@ -11,7 +11,7 @@ app.use(
 app.get("/", (req, res) => {
   res.json({ message: "ok" });
 });
-app.use("/programming-languages", programmingLanguagesRouter);
+app.use("/displayDB", displayDBRouter);
 /* Error handler middleware */
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;

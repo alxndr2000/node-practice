@@ -5,7 +5,7 @@ services:
     image: dockerthing
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./NodeBackend/Dockerfile
     environment:
       NODE_ENV: development
     ports:
